@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MVVMPracticePrism.Views.SendParameters"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="5" >
+            <TextBlock Text="{Binding DataContext.Title}"/>
+            <hc:TextBox Width="200" hc:InfoElement.Placeholder="Pass Parameter.." Text="{Binding PassText}"/>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="ViewA" Margin="5">Navigate to View A</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="ViewB" Margin="5">Navigate to View B</Button>
+        </StackPanel>
+        <hc:TabControl IsUWPStyle="True" IsAnimationEnabled="True" IsDraggable="False" IsScrollable="True" IsTabFillEnabled="False" Grid.Row="1" SelectedIndex="0" prism:RegionManager.RegionName="ParameterRegion" Margin="5">
+            <hc:TabControl.ItemContainerStyle>
+                <Style BasedOn="{StaticResource UWPTabItem}" TargetType="hc:TabItem">
+                    <Setter Property="Header" Value="{Binding DataContext.Title}" />
+                </Style>
+            </hc:TabControl.ItemContainerStyle>
+        </hc:TabControl>
+
+    </Grid>
+</UserControl>

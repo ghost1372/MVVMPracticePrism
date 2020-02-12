@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MVVMPracticePrism.Views.TabControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource TabItemStyle}" TargetType="TabItem">
+            <Setter Property="Header" Value="{Binding DataContext.Title}" />
+        </Style>
+    </UserControl.Resources>
+    <StackPanel>
+        <TabControl SelectedIndex="0" Style="{StaticResource TabControlCapsule}" prism:RegionManager.RegionName="TabRegion" Margin="5"  />
+    </StackPanel>
+</UserControl>

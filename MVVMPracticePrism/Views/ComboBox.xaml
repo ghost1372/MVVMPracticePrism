@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="MVVMPracticePrism.Views.ComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <StackPanel>
+        <hc:ComboBox hc:InfoElement.Placeholder="Select Item..." ItemsSource="{Binding CmbItems}"
+                  DisplayMemberPath="Name">
+            <hc:Interaction.Triggers>
+                <hc:EventTrigger EventName="SelectionChanged">
+                    <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True"/>
+                </hc:EventTrigger>
+            </hc:Interaction.Triggers>
+        </hc:ComboBox>
+        <TextBlock Text="{Binding SelectedText}" FontSize="40"/>
+    </StackPanel>
+</UserControl>
