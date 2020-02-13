@@ -74,6 +74,11 @@
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Boards.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
+                <hc:SideMenuItem Header="IDialog Service" Command="{Binding NavigateCommand}" CommandParameter="CustomRequest">
+                    <hc:SideMenuItem.Icon>
+                        <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-OverView.png" Width="24" Height="24"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
             </hc:SideMenu>
             <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />
         </Grid>

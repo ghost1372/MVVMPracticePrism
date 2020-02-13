@@ -55,16 +55,21 @@
     </ApplicationDefinition>
     <Compile Include="Model\Person.cs" />
     <Compile Include="ViewModels\ComboBox\ComboBoxViewModel.cs" />
+    <Compile Include="ViewModels\IDialogService\CustomRequestViewModel.cs" />
     <Compile Include="ViewModels\EventAggregator\EventAggregatorViewModel.cs" />
     <Compile Include="ViewModels\ListBox\ListBoxViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\EventAggregator\MessageSenderViewModel.cs" />
     <Compile Include="ViewModels\EventAggregator\MessageReceiverViewModel.cs" />
+    <Compile Include="ViewModels\IDialogService\NotificationDialogViewModel.cs" />
     <Compile Include="ViewModels\SendParameters\SendParametersViewModel.cs" />
     <Compile Include="ViewModels\TabControl\SoonViewModel.cs" />
     <Compile Include="ViewModels\TabControl\TabControlViewModel.cs" />
     <Compile Include="ViewModels\SendParameters\ViewAViewModel.cs" />
     <Compile Include="ViewModels\SendParameters\ViewBViewModel.cs" />
+    <Compile Include="Views\IDialogService\CustomRequest.xaml.cs">
+      <DependentUpon>CustomRequest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EventAggregator\EventAggregator.xaml.cs">
       <DependentUpon>EventAggregator.xaml</DependentUpon>
     </Compile>
@@ -76,6 +81,9 @@
     </Compile>
     <Compile Include="Views\EventAggregator\MessageReceiver.xaml.cs">
       <DependentUpon>MessageReceiver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IDialogService\NotificationDialog.xaml.cs">
+      <DependentUpon>NotificationDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SendParameters\SendParameters.xaml.cs">
       <DependentUpon>SendParameters.xaml</DependentUpon>
@@ -93,6 +101,10 @@
       <DependentUpon>ViewB.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\ComboBox\ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IDialogService\CustomRequest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EventAggregator\MessageReceiver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IDialogService\NotificationDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

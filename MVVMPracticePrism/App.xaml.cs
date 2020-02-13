@@ -1,5 +1,6 @@
 ﻿using HandyControl.Data;
 using HandyControl.Tools;
+using MVVMPracticePrism.ViewModels;
 using MVVMPracticePrism.Views;
 using Prism.Ioc;
 using System;
@@ -24,6 +25,8 @@ namespace MVVMPracticePrism
             containerRegistry.RegisterForNavigation<ViewA>();
             containerRegistry.RegisterForNavigation<ViewB>();
             containerRegistry.RegisterForNavigation<EventAggregator>();
+            containerRegistry.RegisterForNavigation<CustomRequest>();
+            containerRegistry.RegisterDialog<NotificationDialog, NotificationDialogViewModel>();
         }
 
         protected override void OnStartup(StartupEventArgs e)

@@ -1,21 +1,18 @@
 ﻿using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MVVMPracticePrism.ViewModels
 {
     public class MessageSenderViewModel : BindableBase
     {
-        IEventAggregator _ea;
+        private readonly IEventAggregator _ea;
 
         private string _message = "Message to Send";
         public string Message
         {
-            get { return _message; }
-            set { SetProperty(ref _message, value); }
+            get => _message;
+            set => SetProperty(ref _message, value);
         }
 
         public DelegateCommand SendCommand { get; private set; }

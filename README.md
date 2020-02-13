@@ -11,6 +11,7 @@ Best Prism MVVM Practice 2020
 - SelectionChanged
 - Commands
 - EventAggregator
+- IDialogService
 
 ![Prism](Resources/Demo1.png)
 ![Prism](Resources/Demo2.png)
