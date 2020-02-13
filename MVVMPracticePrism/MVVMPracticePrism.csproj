@@ -54,37 +54,53 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Person.cs" />
-    <Compile Include="ViewModels\ComboBoxViewModel.cs" />
-    <Compile Include="ViewModels\ListBoxViewModel.cs" />
+    <Compile Include="ViewModels\ComboBox\ComboBoxViewModel.cs" />
+    <Compile Include="ViewModels\EventAggregator\EventAggregatorViewModel.cs" />
+    <Compile Include="ViewModels\ListBox\ListBoxViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\SendParametersViewModel.cs" />
-    <Compile Include="ViewModels\SoonViewModel.cs" />
-    <Compile Include="ViewModels\TabControlViewModel.cs" />
-    <Compile Include="ViewModels\ViewAViewModel.cs" />
-    <Compile Include="ViewModels\ViewBViewModel.cs" />
-    <Compile Include="Views\ListBox.xaml.cs">
+    <Compile Include="ViewModels\EventAggregator\MessageSenderViewModel.cs" />
+    <Compile Include="ViewModels\EventAggregator\MessageReceiverViewModel.cs" />
+    <Compile Include="ViewModels\SendParameters\SendParametersViewModel.cs" />
+    <Compile Include="ViewModels\TabControl\SoonViewModel.cs" />
+    <Compile Include="ViewModels\TabControl\TabControlViewModel.cs" />
+    <Compile Include="ViewModels\SendParameters\ViewAViewModel.cs" />
+    <Compile Include="ViewModels\SendParameters\ViewBViewModel.cs" />
+    <Compile Include="Views\EventAggregator\EventAggregator.xaml.cs">
+      <DependentUpon>EventAggregator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListBox\ListBox.xaml.cs">
       <DependentUpon>ListBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SendParameters.xaml.cs">
+    <Compile Include="Views\EventAggregator\MessageSender.xaml.cs">
+      <DependentUpon>MessageSender.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventAggregator\MessageReceiver.xaml.cs">
+      <DependentUpon>MessageReceiver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SendParameters\SendParameters.xaml.cs">
       <DependentUpon>SendParameters.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Soon.xaml.cs">
+    <Compile Include="Views\TabControl\Soon.xaml.cs">
       <DependentUpon>Soon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TabControl.xaml.cs">
+    <Compile Include="Views\TabControl\TabControl.xaml.cs">
       <DependentUpon>TabControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ViewA.xaml.cs">
+    <Compile Include="Views\SendParameters\ViewA.xaml.cs">
       <DependentUpon>ViewA.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ViewB.xaml.cs">
+    <Compile Include="Views\SendParameters\ViewB.xaml.cs">
       <DependentUpon>ViewB.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\ComboBox.xaml">
+    <Page Include="Views\ComboBox\ComboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ListBox.xaml">
+    <Page Include="Views\EventAggregator\EventAggregator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListBox\ListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,30 +112,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\ComboBox.xaml.cs">
+    <Compile Include="Views\ComboBox\ComboBox.xaml.cs">
       <DependentUpon>ComboBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\SendParameters.xaml">
+    <Page Include="Views\EventAggregator\MessageSender.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Soon.xaml">
+    <Page Include="Views\EventAggregator\MessageReceiver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TabControl.xaml">
+    <Page Include="Views\SendParameters\SendParameters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ViewA.xaml">
+    <Page Include="Views\TabControl\Soon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ViewB.xaml">
+    <Page Include="Views\TabControl\TabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SendParameters\ViewA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SendParameters\ViewB.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

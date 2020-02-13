@@ -9,13 +9,13 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Margin="5" >
+        <StackPanel Orientation="Horizontal" Margin="15,35,10,10" >
             <TextBlock Text="{Binding DataContext.Title}"/>
             <hc:TextBox Width="200" hc:InfoElement.Placeholder="Pass Parameter.." Text="{Binding PassText}"/>
             <Button Command="{Binding NavigateCommand}" CommandParameter="ViewA" Margin="5">Navigate to View A</Button>
             <Button Command="{Binding NavigateCommand}" CommandParameter="ViewB" Margin="5">Navigate to View B</Button>
         </StackPanel>
-        <hc:TabControl IsUWPStyle="True" IsAnimationEnabled="True" IsDraggable="False" IsScrollable="True" IsTabFillEnabled="False" Grid.Row="1" SelectedIndex="0" prism:RegionManager.RegionName="ParameterRegion" Margin="5">
+        <hc:TabControl  IsUWPStyle="True" IsAnimationEnabled="True" IsDraggable="False" IsScrollable="True" IsTabFillEnabled="False" Grid.Row="1" SelectedIndex="0" prism:RegionManager.RegionName="ParameterRegion" Margin="15,0,10,35">
             <hc:TabControl.ItemContainerStyle>
                 <Style BasedOn="{StaticResource UWPTabItem}" TargetType="hc:TabItem">
                     <Setter Property="Header" Value="{Binding DataContext.Title}" />

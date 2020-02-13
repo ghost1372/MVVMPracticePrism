@@ -23,6 +23,7 @@ namespace MVVMPracticePrism
             containerRegistry.RegisterForNavigation<SendParameters>();
             containerRegistry.RegisterForNavigation<ViewA>();
             containerRegistry.RegisterForNavigation<ViewB>();
+            containerRegistry.RegisterForNavigation<EventAggregator>();
         }
 
         protected override void OnStartup(StartupEventArgs e)

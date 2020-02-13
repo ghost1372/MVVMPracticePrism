@@ -10,5 +10,10 @@ Best Prism MVVM Practice 2020
 - Event To Command
 - SelectionChanged
 - Commands
+- EventAggregator
 
-![Prism](Untitled.png)
+![Prism](Resources\Demo1.png)
+![Prism](Resources\Demo2.png)
+![Prism](Resources\Demo3.png)
+![Prism](Resources\Demo4.png)
+![Prism](Resources\Demo5.png)

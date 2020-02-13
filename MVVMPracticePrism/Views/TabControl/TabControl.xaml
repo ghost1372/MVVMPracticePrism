@@ -10,6 +10,6 @@
         </Style>
     </UserControl.Resources>
     <StackPanel>
-        <TabControl SelectedIndex="0" Style="{StaticResource TabControlCapsule}" prism:RegionManager.RegionName="TabRegion" Margin="5"  />
+        <TabControl SelectedIndex="0" Style="{StaticResource TabControlCapsule}" prism:RegionManager.RegionName="TabRegion" Margin="15,35,10,35"  />
     </StackPanel>
 </UserControl>

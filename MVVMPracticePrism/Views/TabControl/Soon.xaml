@@ -3,5 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <TextBlock Text="Coming Soon.." FontSize="60"/>
+    <StackPanel Margin="35">
+        <TextBlock Style="{StaticResource TextBlockDefaultPrimary}" Margin="10" Text="Prism" FontSize="60"/>
+        <TextBlock Style="{StaticResource TextBlockDefaultAccent}" Margin="10" Text="TabControl" FontSize="60"/>
+    </StackPanel>
 </UserControl>
