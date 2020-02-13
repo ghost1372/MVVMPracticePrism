@@ -6,7 +6,8 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <StackPanel Margin="15,30,10,30">
-        <Button Content="Open Dialog" Command="{Binding OpenCommand}"/>
-        <TextBlock Text="{Binding Title}" FontSize="40"/>
+        <Label Style="{StaticResource LabelDanger}" Content="Open Interactive Dialog"/>
+        <Button Margin="0,50,0,0" Content="Open Dialog" Command="{Binding OpenCommand}"/>
+        <TextBlock Margin="15,50" Text="{Binding Title}" FontSize="40"/>
     </StackPanel>
 </UserControl>

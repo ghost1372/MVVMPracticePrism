@@ -17,6 +17,8 @@ namespace MVVMPracticePrism
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterDialog<NotificationDialog, NotificationDialogViewModel>();
+
             containerRegistry.RegisterForNavigation<ComboBox>();
             containerRegistry.RegisterForNavigation<TabControl>();
             containerRegistry.RegisterForNavigation<ListBox>();
@@ -26,7 +28,7 @@ namespace MVVMPracticePrism
             containerRegistry.RegisterForNavigation<ViewB>();
             containerRegistry.RegisterForNavigation<EventAggregator>();
             containerRegistry.RegisterForNavigation<CustomRequest>();
-            containerRegistry.RegisterDialog<NotificationDialog, NotificationDialogViewModel>();
+            containerRegistry.RegisterForNavigation<RegionLifetime>();
         }
 
         protected override void OnStartup(StartupEventArgs e)

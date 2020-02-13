@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="MVVMPracticePrism.Views.RegionLifetime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <StackPanel Margin="15,35,10,0">
+        <Label Style="{StaticResource LabelDanger}" Content="ReCreate View, Write Something in TextBox then Change the view, reopen this view again"/>
+        <hc:TextBox Margin="0,10,0,10" Name="txt" hc:InfoElement.Placeholder="Write Something here..."/>
+        <TextBlock FontSize="40" Text="{Binding ElementName=txt, Path=Text}" Style="{StaticResource TextBlockDefaultWarning}"/>
+    </StackPanel>
+</UserControl>

@@ -4,7 +4,7 @@ using Prism.Regions;
 
 namespace MVVMPracticePrism.ViewModels
 {
-    public class EventAggregatorViewModel : BindableBase
+    public class EventAggregatorViewModel : BindableBase, IRegionMemberLifetime
     {
         private readonly IRegionManager _regionManager;
 
@@ -14,5 +14,7 @@ namespace MVVMPracticePrism.ViewModels
             _regionManager.RegisterViewWithRegion("SendRegion", typeof(MessageSender));
             _regionManager.RegisterViewWithRegion("ReceiverRegion", typeof(MessageReceiver));
         }
+
+        public bool KeepAlive => false;
     }
 }

@@ -4,8 +4,9 @@
              xmlns:prism="http://prismlibrary.com/"
              xmlns:hc="https://handyorg.github.io/handycontrol"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <StackPanel>
-        <hc:ComboBox Margin="15,35,10,35" hc:InfoElement.Placeholder="Select Item..." ItemsSource="{Binding CmbItems}"
+    <StackPanel Margin="15,35,10,35" >
+        <Label Style="{StaticResource LabelDanger}" Content="Load Items to ComboBox with SelectionChanged event"/>
+        <hc:ComboBox Margin="0,10" hc:InfoElement.Placeholder="Select Item..." ItemsSource="{Binding CmbItems}"
                   DisplayMemberPath="Name">
             <hc:Interaction.Triggers>
                 <hc:EventTrigger EventName="SelectionChanged">

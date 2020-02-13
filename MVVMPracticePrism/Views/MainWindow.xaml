@@ -64,12 +64,12 @@
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Repos.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="TabControl and Parameters" Command="{Binding NavigateCommand}" CommandParameter="SendParameters">
+                <hc:SideMenuItem Header="Passing Parameters" Command="{Binding NavigateCommand}" CommandParameter="SendParameters">
                     <hc:SideMenuItem.Icon>
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Pipelines.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Message Between ViewModels" Command="{Binding NavigateCommand}" CommandParameter="EventAggregator">
+                <hc:SideMenuItem Header="EventAggregator" Command="{Binding NavigateCommand}" CommandParameter="EventAggregator">
                     <hc:SideMenuItem.Icon>
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Boards.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
@@ -77,6 +77,11 @@
                 <hc:SideMenuItem Header="IDialog Service" Command="{Binding NavigateCommand}" CommandParameter="CustomRequest">
                     <hc:SideMenuItem.Icon>
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-OverView.png" Width="24" Height="24"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="IRegionMemberLifetime" Command="{Binding NavigateCommand}" CommandParameter="RegionLifetime">
+                    <hc:SideMenuItem.Icon>
+                        <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-TestPlans.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
             </hc:SideMenu>

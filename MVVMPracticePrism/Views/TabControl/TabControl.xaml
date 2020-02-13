@@ -9,7 +9,9 @@
             <Setter Property="Header" Value="{Binding DataContext.Title}" />
         </Style>
     </UserControl.Resources>
-    <StackPanel>
-        <TabControl SelectedIndex="0" Style="{StaticResource TabControlCapsule}" prism:RegionManager.RegionName="TabRegion" Margin="15,35,10,35"  />
+    <StackPanel Margin="15,35,10,35">
+        <Label Style="{StaticResource LabelDanger}" Content="Load Views into TabControl as TabItem"/>
+
+        <TabControl Margin="0,10,0,0" SelectedIndex="0" Style="{StaticResource TabControlCapsule}" prism:RegionManager.RegionName="TabRegion"/>
     </StackPanel>
 </UserControl>

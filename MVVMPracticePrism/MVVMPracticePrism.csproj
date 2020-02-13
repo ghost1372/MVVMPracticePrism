@@ -62,6 +62,7 @@
     <Compile Include="ViewModels\EventAggregator\MessageSenderViewModel.cs" />
     <Compile Include="ViewModels\EventAggregator\MessageReceiverViewModel.cs" />
     <Compile Include="ViewModels\IDialogService\NotificationDialogViewModel.cs" />
+    <Compile Include="ViewModels\RegionLifetimeViewModel.cs" />
     <Compile Include="ViewModels\SendParameters\SendParametersViewModel.cs" />
     <Compile Include="ViewModels\TabControl\SoonViewModel.cs" />
     <Compile Include="ViewModels\TabControl\TabControlViewModel.cs" />
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="Views\IDialogService\NotificationDialog.xaml.cs">
       <DependentUpon>NotificationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegionLifetime.xaml.cs">
+      <DependentUpon>RegionLifetime.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SendParameters\SendParameters.xaml.cs">
       <DependentUpon>SendParameters.xaml</DependentUpon>
@@ -140,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\IDialogService\NotificationDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegionLifetime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
