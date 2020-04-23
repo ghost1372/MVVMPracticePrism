@@ -14,6 +14,7 @@ Best Prism MVVM Practice 2020
 - IDialogService
 - IRegionMemberLifetime
 - Modules (Code, Directory, Manual)
+- SplashScreen
 
 ![Prism](Resources/Demo1.png)
 ![Prism](Resources/Demo2.png)
