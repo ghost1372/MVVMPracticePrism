@@ -3,6 +3,7 @@ using HandyControl.Tools;
 using MVVMPracticePrism.ViewModels;
 using MVVMPracticePrism.Views;
 using Prism.Ioc;
+using Prism.Modularity;
 using System;
 using System.Windows;
 
@@ -12,7 +13,27 @@ namespace MVVMPracticePrism
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+           return ShowSplashScreen(true);
+        }
+
+        internal Window ShowSplashScreen(bool ShowSplashScreen)
+        {
+            if (ShowSplashScreen)
+            {
+                SplashShell splash = new SplashShell();
+                splash.Show();
+
+                MainWindow shell = new MainWindow();
+                shell.Dispatcher.BeginInvoke((Action)delegate {
+                    shell.Show();
+                    splash.Close();
+                });
+                return shell;
+            }
+            else
+            {
+                return Container.Resolve<MainWindow>();
+            }
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -29,13 +50,11 @@ namespace MVVMPracticePrism
             containerRegistry.RegisterForNavigation<EventAggregator>();
             containerRegistry.RegisterForNavigation<CustomRequest>();
             containerRegistry.RegisterForNavigation<RegionLifetime>();
+            containerRegistry.RegisterForNavigation<ModuleCode>();
+            containerRegistry.RegisterForNavigation<ModuleDirectory>();
+            containerRegistry.RegisterForNavigation<ModuleManual>();
         }
 
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            base.OnStartup(e);
-            ConfigHelper.Instance.SetWindowDefaultStyle();
-        }
         internal void UpdateSkin(SkinType skin)
         {
             Resources.MergedDictionaries.Clear();

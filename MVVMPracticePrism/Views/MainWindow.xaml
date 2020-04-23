@@ -48,7 +48,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <hc:SideMenu BorderThickness="1" Width="230" Margin="15,32,0,32">
+            <hc:SideMenu BorderThickness="1" Height="auto" Width="230" Margin="15,32,0,32">
                 <hc:SideMenuItem Header="ComboBox" Command="{Binding NavigateCommand}" CommandParameter="ComboBox">
                     <hc:SideMenuItem.Icon>
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Pipelines.png" Width="24" Height="24"/>
@@ -83,6 +83,26 @@
                     <hc:SideMenuItem.Icon>
                         <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-TestPlans.png" Width="24" Height="24"/>
                     </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Module">
+                    <hc:SideMenuItem.Icon>
+                        <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Repos.png" Width="24" Height="24"/>
+                    </hc:SideMenuItem.Icon>
+                    <hc:SideMenuItem Header="Module Code" Command="{Binding NavigateCommand}" CommandParameter="ModuleCode">
+                        <hc:SideMenuItem.Icon>
+                            <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Pipelines.png" Width="24" Height="24"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+                    <hc:SideMenuItem Header="Module Directory" Command="{Binding NavigateCommand}" CommandParameter="ModuleDirectory">
+                        <hc:SideMenuItem.Icon>
+                            <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-TestPlans.png" Width="24" Height="24"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+                    <hc:SideMenuItem Header="Module Manual" Command="{Binding NavigateCommand}" CommandParameter="ModuleManual">
+                        <hc:SideMenuItem.Icon>
+                            <Image Source="/MVVMPracticePrism;component/Resources/Img/DevOps/DevOps-Boards.png" Width="24" Height="24"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
                 </hc:SideMenuItem>
             </hc:SideMenu>
             <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentRegion" />

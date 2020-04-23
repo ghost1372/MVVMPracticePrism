@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="HandyControls">
-      <Version>2.4.8</Version>
+      <Version>2.4.9.2</Version>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc" Version="7.2.0.1422" />
   </ItemGroup>
@@ -62,6 +62,9 @@
     <Compile Include="ViewModels\EventAggregator\MessageSenderViewModel.cs" />
     <Compile Include="ViewModels\EventAggregator\MessageReceiverViewModel.cs" />
     <Compile Include="ViewModels\IDialogService\NotificationDialogViewModel.cs" />
+    <Compile Include="ViewModels\Module\ModuleManualViewModel.cs" />
+    <Compile Include="ViewModels\Module\ModuleDirectoryViewModel.cs" />
+    <Compile Include="ViewModels\Module\ModuleCodeViewModel.cs" />
     <Compile Include="ViewModels\RegionLifetimeViewModel.cs" />
     <Compile Include="ViewModels\SendParameters\SendParametersViewModel.cs" />
     <Compile Include="ViewModels\TabControl\SoonViewModel.cs" />
@@ -86,11 +89,23 @@
     <Compile Include="Views\IDialogService\NotificationDialog.xaml.cs">
       <DependentUpon>NotificationDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Module\ModuleManual.xaml.cs">
+      <DependentUpon>ModuleManual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Module\ModuleDirectory.xaml.cs">
+      <DependentUpon>ModuleDirectory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Module\ModuleCode.xaml.cs">
+      <DependentUpon>ModuleCode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegionLifetime.xaml.cs">
       <DependentUpon>RegionLifetime.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SendParameters\SendParameters.xaml.cs">
       <DependentUpon>SendParameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashShell.xaml.cs">
+      <DependentUpon>SplashShell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TabControl\Soon.xaml.cs">
       <DependentUpon>Soon.xaml</DependentUpon>
@@ -147,11 +162,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Module\ModuleManual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Module\ModuleDirectory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Module\ModuleCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegionLifetime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SendParameters\SendParameters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,5 +222,16 @@
     <Resource Include="Resources\Img\DevOps\DevOps-Repos.png" />
     <Resource Include="Resources\Img\DevOps\DevOps-TestPlans.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModuleManualPractice\ModuleManualPractice.csproj">
+      <Project>{86292137-8552-41e3-8a8a-2c3b66af432b}</Project>
+      <Name>ModuleManualPractice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModulePractice\ModuleCodePractice.csproj">
+      <Project>{269d383a-d6a1-4e8b-b5d4-eb99bf41228f}</Project>
+      <Name>ModuleCodePractice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
