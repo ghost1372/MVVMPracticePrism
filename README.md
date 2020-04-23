@@ -12,6 +12,8 @@ Best Prism MVVM Practice 2020
 - Commands
 - EventAggregator
 - IDialogService
+- IRegionMemberLifetime
+- Modules (Code, Directory, Manual)
 
 ![Prism](Resources/Demo1.png)
 ![Prism](Resources/Demo2.png)
