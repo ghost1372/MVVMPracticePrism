@@ -1,9 +1,7 @@
 ﻿using HandyControl.Data;
-using HandyControl.Tools;
 using MVVMPracticePrism.ViewModels;
 using MVVMPracticePrism.Views;
 using Prism.Ioc;
-using Prism.Modularity;
 using System;
 using System.Windows;
 
@@ -13,7 +11,7 @@ namespace MVVMPracticePrism
     {
         protected override Window CreateShell()
         {
-           return ShowSplashScreen(true);
+            return ShowSplashScreen(true);
         }
 
         internal Window ShowSplashScreen(bool ShowSplashScreen)
@@ -24,7 +22,8 @@ namespace MVVMPracticePrism
                 splash.Show();
 
                 MainWindow shell = new MainWindow();
-                shell.Dispatcher.BeginInvoke((Action)delegate {
+                shell.Dispatcher.BeginInvoke((Action)delegate
+                {
                     shell.Show();
                     splash.Close();
                 });

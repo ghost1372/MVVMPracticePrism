@@ -1,20 +1,23 @@
-﻿using HandyControl.Controls;
-using Prism.Commands;
-using Prism.Modularity;
+﻿using Prism.Modularity;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace MVVMPracticePrism.ViewModels
 {
     public class ModuleDirectoryViewModel : BindableBase
     {
-        public ModuleDirectoryViewModel()
+        public ModuleDirectoryViewModel(IModuleManager moduleManager, IModuleCatalog moduleCatalog)
         {
-           
+            ModuleCatalog directoryCatalog = new DirectoryModuleCatalog() { ModulePath = @"Modules" };
+
+            directoryCatalog.Initialize();
+            foreach (IModuleCatalogItem module in directoryCatalog.Items)
+            {
+                ModuleInfo mi = (ModuleInfo)module;
+                moduleCatalog.AddModule(mi);
+            }
+
+            moduleManager.LoadModule(directoryCatalog.Modules.First().ModuleName);
         }
     }
 }

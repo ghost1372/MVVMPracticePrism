@@ -10,7 +10,7 @@
         Title="{Binding Title}" 
         WindowStartupLocation="CenterScreen"
         ShowTitle="True"
-        Height="450" 
+        Height="650" 
         Width="900">
     <hc:Window.NonClientAreaContent>
         <Grid>
