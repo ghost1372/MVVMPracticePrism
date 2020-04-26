@@ -1,0 +1,17 @@
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\bin\Debug\netcoreapp3.1\Module.First.deps.json
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\bin\Debug\netcoreapp3.1\Module.First.dll
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\bin\Debug\netcoreapp3.1\Module.First.pdb
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.csprojAssemblyReference.cache
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Views\ViewA.g.cs
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First_MarkupCompile.cache
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First_MarkupCompile.lref
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Views\ViewA.baml
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.g.resources
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.csproj.CoreCompileInputs.cache
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.AssemblyInfoInputs.cache
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.AssemblyInfo.cs
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.csproj.CopyComplete
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.dll
+C:\Users\Mahdi\source\repos\PrismDynamicModule\Module.First\obj\Debug\netcoreapp3.1\Module.First.pdb
