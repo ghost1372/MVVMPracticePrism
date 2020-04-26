@@ -44,12 +44,8 @@ namespace PrismDynamicModule.ViewModels
 
             if (e.AddedItems[0] is ModuleModel item)
             {
-
                 //Clear last module
-                foreach (object view in region.Regions["RegionModule"].Views)
-                {
-                    region.Regions["RegionModule"].Remove(view);
-                }
+                region.Regions["RegionModule"].RemoveAll();
 
                 // register module
                 region.RegisterViewWithRegion("RegionModule", item.DefaultView);
