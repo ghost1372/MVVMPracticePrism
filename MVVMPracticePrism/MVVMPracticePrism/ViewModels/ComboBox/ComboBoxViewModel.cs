@@ -31,6 +31,8 @@ namespace MVVMPracticePrism.ViewModels
             {
                 CmbItems.Add(new Person { Name = $"Hello {i}", LName = "Bye!" });
             }
+
+            DefaultItem = "Hello 3";
         }
 
         private void Switch(SelectionChangedEventArgs e)
@@ -45,5 +47,14 @@ namespace MVVMPracticePrism.ViewModels
                 SelectedText = item.Name;
             }
         }
+
+        #region Default Item Selected
+        private string _DefaultItem;
+        public string DefaultItem
+        {
+            get => _DefaultItem;
+            set => SetProperty(ref _DefaultItem, value);
+        }
+        #endregion
     }
 }

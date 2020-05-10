@@ -5,6 +5,7 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <StackPanel Margin="15,35,10,35" >
+        <hc:Divider Content="SelectionChanged"/>
         <Label Style="{StaticResource LabelDanger}" Content="Load Items to ComboBox with SelectionChanged event"/>
         <hc:ComboBox Margin="0,10" hc:InfoElement.Placeholder="Select Item..." ItemsSource="{Binding CmbItems}"
                   DisplayMemberPath="Name">
@@ -15,5 +16,15 @@
             </hc:Interaction.Triggers>
         </hc:ComboBox>
         <TextBlock Margin="15" Text="{Binding SelectedText}" FontSize="40"/>
+
+        <hc:Divider Content="Default Item Selected"/>
+        <hc:ComboBox Margin="0,10" SelectedValuePath="Content" SelectedValue="{Binding DefaultItem}">
+            <ComboBoxItem Content="Hello 1"/>
+            <ComboBoxItem Content="Hello 2"/>
+            <ComboBoxItem Content="Hello 3"/>
+            <ComboBoxItem Content="Bye"/>
+        </hc:ComboBox>
+        <hc:Divider Content="Default Item Selected (Model)"/>
+        <hc:ComboBox ItemsSource="{Binding CmbItems}" DisplayMemberPath="Name" SelectedValuePath="Name" SelectedValue="{Binding DefaultItem}"/>
     </StackPanel>
 </UserControl>
